@@ -22,8 +22,8 @@ void setup() {
 
 void draw() {
   background(255);
-  
-  activeMirrorCount = constrain(activeMirrorCount,4,200);
+
+  activeMirrorCount = constrain(activeMirrorCount, 4, 200);
 
   Mirror[] mirrors = new Mirror[activeMirrorCount];
 
@@ -40,7 +40,7 @@ void draw() {
 
   activeMirrorCount+=mirrorCountStep;
   if (activeMirrorCount > 200 || activeMirrorCount < 4) {
-    
+
     mirrorCountStep *= -1;
     activeMirrorCount += mirrorCountStep;
   }
@@ -59,6 +59,7 @@ void draw() {
   textAlign(LEFT, BOTTOM);
   textSize(25);
   text("#Mirrors = " + (activeMirrorCount-mirrorCountStep), 0, height);
+  //text(frameRate, 0, 50);
 }
 
 boolean running = true;
